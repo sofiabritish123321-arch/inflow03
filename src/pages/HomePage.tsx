@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimatedBackground from '../components/AnimatedBackground';
-import { Play, Users, Zap, Calendar, BarChart3, CheckCircle, Star, Sparkles } from 'lucide-react';
+import { Play, Users, Zap, Calendar, ChartBar as BarChart3, CircleCheck as CheckCircle, Star, Sparkles } from 'lucide-react';
 
 interface HomePageProps {
   onNavigate?: (page: string) => void;
