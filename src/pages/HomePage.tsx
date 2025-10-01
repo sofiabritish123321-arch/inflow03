@@ -162,15 +162,17 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
 
           <div className="max-w-6xl mx-auto">
             <div className="relative aspect-video bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden shadow-xl">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-pink-50/50 to-purple-50/50">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto hover-lift cursor-pointer shadow-lg hover:shadow-pink-500/25 transition-all duration-300">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                  <p className="text-gray-700 text-lg font-semibold">Demo Video Coming Soon</p>
-                  <p className="text-gray-500 text-sm mt-2">1920 × 1080</p>
-                </div>
-              </div>
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/ydF-wofRmW8?rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=1"
+                title="Inflow Demo Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full rounded-2xl"
+                loading="lazy">
+              </iframe>
             </div>
           </div>
         </div>
