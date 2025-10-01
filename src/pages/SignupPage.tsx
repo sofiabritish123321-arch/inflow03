@@ -251,16 +251,16 @@ export default function SignupPage() {
           
           {/* Dashboard Preview - Redesigned and properly positioned */}
           <div className="w-full max-w-lg bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-3 flex-shrink min-h-0 overflow-hidden">
-            <div className="space-y-3 max-h-full overflow-y-auto">
+            <div className="space-y-3 h-full flex flex-col">
               {/* Setup Progress */}
-              <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-2 rounded-lg">
+              <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-2 rounded-lg flex-shrink-0">
                 <div className="text-xs opacity-90">Setup Progress</div>
                 <div className="text-base font-bold">85%</div>
                 <div className="text-xs opacity-75">Almost ready to launch</div>
               </div>
 
               {/* Growth Metrics */}
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2 flex-shrink-0">
                 <div className="bg-white border border-gray-200 p-2 rounded-lg">
                   <div className="text-xs text-gray-600">User Growth</div>
                   <div className="text-base font-bold text-gray-900">+247%</div>
@@ -274,7 +274,7 @@ export default function SignupPage() {
               </div>
 
               {/* First Dashboard Preview */}
-              <div className="bg-white border border-gray-200 p-2 rounded-lg">
+              <div className="bg-white border border-gray-200 p-2 rounded-lg flex-shrink-0">
                 <div className="text-xs font-medium text-gray-900 mb-2">Your First Dashboard</div>
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
@@ -302,7 +302,7 @@ export default function SignupPage() {
               </div>
 
               {/* Onboarding Steps */}
-              <div className="bg-white border border-gray-200 p-2 rounded-lg">
+              <div className="bg-white border border-gray-200 p-2 rounded-lg flex-shrink-0">
                 <div className="text-xs font-medium text-gray-900 mb-2">Getting Started</div>
                 <div className="space-y-1">
                   {[
@@ -324,7 +324,7 @@ export default function SignupPage() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-1">
+              <div className="grid grid-cols-3 gap-1 flex-shrink-0">
                 <div className="bg-blue-50 p-1.5 rounded-lg text-center">
                   <div className="text-xs font-bold text-blue-600">24</div>
                   <div className="text-xs text-blue-600">Contacts</div>

@@ -242,7 +242,7 @@ export default function LoginPage() {
           
           {/* Dashboard Preview - Redesigned and properly positioned */}
           <div className="w-full max-w-lg bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-3 flex-shrink min-h-0 overflow-hidden">
-            <div className="space-y-3 max-h-full overflow-y-auto">
+            <div className="space-y-3 h-full flex flex-col">
               {/* Header Stats */}
               <div className="grid grid-cols-3 gap-2">
                 <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-2 rounded-lg">
@@ -327,13 +327,12 @@ export default function LoginPage() {
               </div>
 
               {/* Recent Transactions */}
-              <div className="bg-white border border-gray-200 p-2 rounded-lg">
+              <div className="bg-white border border-gray-200 p-2 rounded-lg flex-shrink-0">
                 <div className="text-xs font-medium text-gray-900 mb-2">Product Transactions</div>
                 <div className="space-y-1">
                   {[
                     { id: 'INV-001', product: 'Apple iPad Gen 10', date: '14 Feb, 2025', amount: '$649' },
-                    { id: 'INV-002', product: 'Apple iPhone 15', date: '14 Feb, 2025', amount: '$1,199' },
-                    { id: 'INV-003', product: 'Apple MacBook Air', date: '13 Feb, 2025', amount: '$999' }
+                    { id: 'INV-002', product: 'Apple iPhone 15', date: '14 Feb, 2025', amount: '$1,199' }
                   ].map((transaction, index) => (
                     <div key={index} className="flex justify-between items-center py-0.5">
                       <div className="flex-1">
