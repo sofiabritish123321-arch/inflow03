@@ -58,16 +58,16 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex bg-white">
+    <div className="h-screen flex bg-white overflow-hidden">
       {/* Left Section - Form */}
-      <div className="flex-1 flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 relative min-h-screen py-8">
+      <div className="flex-1 flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 relative h-full">
         {/* Logo */}
-        <div className="absolute top-8 left-6 sm:left-8">
+        <div className="absolute top-6 left-6 sm:left-8 z-10">
           <div 
             className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={handleLogoClick}
           >
-            <div className="relative h-10 w-[140px]">
+            <div className="relative h-8 w-[120px]">
               <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                 style={{
                   WebkitMaskImage: "url('/dffdf.png')",
@@ -84,9 +84,9 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="max-w-sm mx-auto w-full">
+        <div className="max-w-sm mx-auto w-full flex-shrink-0 py-16">
           {/* Header */}
-          <div className="mb-6">
+          <div className="mb-4">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               Welcome Back
             </h1>
@@ -96,13 +96,13 @@ export default function LoginPage() {
           </div>
 
           {error && (
-            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
+            <div className="mb-3 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
               {error}
             </div>
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email
@@ -168,7 +168,7 @@ export default function LoginPage() {
           </form>
 
           {/* Divider */}
-          <div className="relative my-5">
+          <div className="relative my-4">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-300"></div>
             </div>
@@ -180,7 +180,7 @@ export default function LoginPage() {
           {/* Google OAuth Button */}
           <button
             onClick={handleGoogleSignIn}
-            className="w-full flex items-center justify-center px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md mb-5 text-sm"
+            className="w-full flex items-center justify-center px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md mb-4 text-sm"
           >
             <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -204,7 +204,7 @@ export default function LoginPage() {
         </div>
 
         {/* Footer */}
-        <div className="absolute bottom-6 left-6 right-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row justify-between text-xs text-gray-400 space-y-1 sm:space-y-0">
+        <div className="absolute bottom-4 left-6 right-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row justify-between text-xs text-gray-400 space-y-1 sm:space-y-0">
           <span>Copyright © 2025 Inflow Enterprises LTD.</span>
           <a href="/privacy" className="hover:text-gray-600 transition-colors">
             Privacy Policy
@@ -213,7 +213,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right Section - Dashboard Preview */}
-      <div className="hidden lg:flex flex-1 relative overflow-hidden min-h-screen">
+      <div className="hidden lg:flex flex-1 relative overflow-hidden h-full">
         {/* Modern Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-600 to-cyan-500"></div>
         
@@ -229,33 +229,33 @@ export default function LoginPage() {
         {/* Subtle Pattern Overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
         
-        <div className="flex flex-col justify-center items-center text-center px-8 relative z-10 w-full">
+        <div className="flex flex-col justify-center items-center text-center px-6 relative z-10 w-full max-h-full py-8">
           {/* Header Text with proper spacing */}
-          <div className="mb-8 mt-16">
-            <h2 className="text-3xl font-black text-white mb-3">
+          <div className="mb-6 flex-shrink-0">
+            <h2 className="text-2xl lg:text-3xl font-black text-white mb-2">
               Effortlessly manage your team and operations.
             </h2>
-            <p className="text-lg text-blue-100 max-w-md-4 leading-relaxed">
+            <p className="text-base lg:text-lg text-blue-100 max-w-md leading-relaxed">
               Log in to access your CRM dashboard and manage your team.
             </p>
           </div>
           
           {/* Dashboard Preview - Redesigned and properly positioned */}
-          <div className="w-full max-w-xl bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-4 mb-16">
-            <div className="space-y-4">
+          <div className="w-full max-w-lg bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-3 flex-shrink min-h-0 overflow-hidden">
+            <div className="space-y-3 max-h-full overflow-y-auto">
               {/* Header Stats */}
-              <div className="grid grid-cols-3 gap-3">
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-3 rounded-lg">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-2 rounded-lg">
                   <div className="text-xs opacity-90">Total Sales</div>
-                  <div className="text-lg font-bold">$189,374</div>
+                  <div className="text-base font-bold">$189,374</div>
                   <div className="text-xs opacity-75">+12% from last month</div>
                 </div>
-                <div className="bg-white border border-gray-200 p-3 rounded-lg">
+                <div className="bg-white border border-gray-200 p-2 rounded-lg">
                   <div className="text-xs text-gray-600">Chat Performance</div>
-                  <div className="text-lg font-bold text-gray-900">00:01:30</div>
+                  <div className="text-base font-bold text-gray-900">00:01:30</div>
                   <div className="text-xs text-gray-500">Avg response time</div>
                 </div>
-                <div className="bg-white border border-gray-200 p-3 rounded-lg">
+                <div className="bg-white border border-gray-200 p-2 rounded-lg">
                   <div className="text-xs text-gray-600">Sales Overview</div>
                   <div className="text-sm font-semibold text-gray-900">Weekly</div>
                   <div className="text-xs text-gray-500">Performance</div>
@@ -263,17 +263,17 @@ export default function LoginPage() {
               </div>
 
               {/* Revenue Chart with Line Chart */}
-              <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                <div className="flex justify-between items-center mb-3">
+              <div className="bg-white border border-gray-200 p-3 rounded-lg">
+                <div className="flex justify-between items-center mb-2">
                   <div>
                     <div className="text-xs text-gray-600">Total Profit</div>
-                    <div className="text-xl font-bold text-gray-900">$25,684</div>
+                    <div className="text-lg font-bold text-gray-900">$25,684</div>
                   </div>
                   <div className="text-xs text-gray-500">Last 30 days</div>
                 </div>
-                <div className="h-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg relative overflow-hidden">
+                <div className="h-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg relative overflow-hidden">
                   {/* Line Chart SVG */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 64" preserveAspectRatio="none">
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 48" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#3B82F6" />
@@ -281,27 +281,27 @@ export default function LoginPage() {
                       </linearGradient>
                     </defs>
                     <path
-                      d="M10,45 Q50,35 80,40 Q120,30 160,20 Q180,15 190,12"
+                      d="M10,35 Q50,25 80,30 Q120,20 160,15 Q180,10 190,8"
                       stroke="url(#lineGradient)"
                       strokeWidth="2"
                       fill="none"
                       strokeLinecap="round"
                     />
                     {/* Data points */}
-                    <circle cx="10" cy="45" r="2" fill="#3B82F6" />
-                    <circle cx="80" cy="40" r="2" fill="#6366F1" />
-                    <circle cx="160" cy="20" r="2" fill="#8B5CF6" />
-                    <circle cx="190" cy="12" r="2" fill="#A855F7" />
+                    <circle cx="10" cy="35" r="1.5" fill="#3B82F6" />
+                    <circle cx="80" cy="30" r="1.5" fill="#6366F1" />
+                    <circle cx="160" cy="15" r="1.5" fill="#8B5CF6" />
+                    <circle cx="190" cy="8" r="1.5" fill="#A855F7" />
                   </svg>
                 </div>
               </div>
 
               {/* Sales Categories */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-white border border-gray-200 p-3 rounded-lg">
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-white border border-gray-200 p-2 rounded-lg">
                   <div className="text-xs text-gray-600 mb-1">Monthly</div>
                   <div className="text-sm font-semibold text-gray-900">Sales Categories</div>
-                  <div className="mt-2 space-y-1">
+                  <div className="mt-1 space-y-1">
                     <div className="flex justify-between text-xs">
                       <span className="text-gray-600">Subscriptions</span>
                       <span className="font-medium">2,448</span>
@@ -316,10 +316,10 @@ export default function LoginPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white border border-gray-200 p-3 rounded-lg flex items-center justify-center">
+                <div className="bg-white border border-gray-200 p-2 rounded-lg flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-1">
-                      <span className="text-white font-bold text-sm">6,248</span>
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-1">
+                      <span className="text-white font-bold text-xs">6,248</span>
                     </div>
                     <div className="text-xs text-gray-600">Total Units</div>
                   </div>
@@ -327,7 +327,7 @@ export default function LoginPage() {
               </div>
 
               {/* Recent Transactions */}
-              <div className="bg-white border border-gray-200 p-3 rounded-lg">
+              <div className="bg-white border border-gray-200 p-2 rounded-lg">
                 <div className="text-xs font-medium text-gray-900 mb-2">Product Transactions</div>
                 <div className="space-y-1">
                   {[
@@ -337,11 +337,11 @@ export default function LoginPage() {
                   ].map((transaction, index) => (
                     <div key={index} className="flex justify-between items-center py-0.5">
                       <div className="flex-1">
-                        <div className="text-xs font-medium text-gray-900">{transaction.id}</div>
-                        <div className="text-xs text-gray-600 truncate">{transaction.product}</div>
+                        <div className="text-xs font-medium text-gray-900 truncate">{transaction.id}</div>
+                        <div className="text-xs text-gray-600 truncate text-xs">{transaction.product}</div>
                       </div>
                       <div className="text-right ml-2">
-                        <div className="text-xs text-gray-500">{transaction.date}</div>
+                        <div className="text-xs text-gray-500 text-xs">{transaction.date}</div>
                         <div className="text-xs font-medium text-gray-900">{transaction.amount}</div>
                       </div>
                     </div>
