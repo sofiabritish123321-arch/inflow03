@@ -68,7 +68,7 @@ export default function LoginPage() {
             onClick={handleLogoClick}
           >
             <div className="relative h-8 w-[120px]">
-            <div className="relative h-10 w-[156px]">
+            <div className="relative h-13 w-[203px]">
               <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                 style={{
                   WebkitMaskImage: "url('/dffdf.png')",

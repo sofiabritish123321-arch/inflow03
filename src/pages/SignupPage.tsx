@@ -10,6 +10,7 @@ export default function SignupPage() {
     username: '',
   });
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -72,7 +73,7 @@ export default function SignupPage() {
             onClick={handleLogoClick}
           >
             <div className="relative h-8 w-[120px]">
-            <div className="relative h-10 w-[156px]">
+            <div className="relative h-13 w-[203px]">
               <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                 style={{
                   WebkitMaskImage: "url('/dffdf.png')",
@@ -106,6 +107,29 @@ export default function SignupPage() {
               {error}
             </div>
           )}
+
+          {/* Privacy Policy Checkbox */}
+          <div className="mb-3">
+            <label className="flex items-start">
+              <input
+                type="checkbox"
+                checked={acceptPrivacy}
+                onChange={(e) => setAcceptPrivacy(e.target.checked)}
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 mt-0.5 mr-3 flex-shrink-0"
+                required
+              />
+              <span className="text-sm text-gray-600">
+                I agree to the{' '}
+                <button
+                  type="button"
+                  onClick={() => window.location.href = '/privacy'}
+                  className="text-blue-600 hover:text-blue-700 underline font-medium"
+                >
+                  Privacy Policy
+                </button>
+              </span>
+            </label>
+          </div>
 
           {/* Privacy Policy Checkbox */}
           <div className="mb-3">
