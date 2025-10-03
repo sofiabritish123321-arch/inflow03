@@ -242,7 +242,7 @@ export default function SignupPage() {
           {/* Header Text with proper spacing */}
           <div className="mb-6 flex-shrink-0">
             <h2 className="text-2xl lg:text-3xl font-black text-white mb-2">
-              Start building your business today.
+              Start building your business today
             </h2>
             <p className="text-base lg:text-lg text-blue-100 max-w-md-4 leading-relaxed">
               Join thousands of businesses growing with our platform.
