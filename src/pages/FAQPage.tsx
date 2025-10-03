@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 
-export default function FAQPage() {
+interface FAQPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export default function FAQPage({ onNavigate }: FAQPageProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
