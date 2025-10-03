@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 
-export default function FAQPage() {
+interface FAQPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export default function FAQPage({ onNavigate }: FAQPageProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
@@ -116,12 +120,12 @@ export default function FAQPage() {
               <p className="text-gray-600 mb-6">
                 Our support team is here to help. Get in touch and we'll get back to you as soon as possible.
               </p>
-              <a
-                onClick={() => window.location.href = '/#contact'}
-               className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-3 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25"
+              <button
+                onClick={() => onNavigate && onNavigate('contact')}
+                className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-3 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25"
               >
                 Contact Support
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -9,6 +9,8 @@ export default function SignupPage() {
     password: '',
     username: '',
   });
+  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -71,6 +73,7 @@ export default function SignupPage() {
             onClick={handleLogoClick}
           >
             <div className="relative h-8 w-[120px]">
+            <div className="relative h-13 w-[203px]">
               <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                 style={{
                   WebkitMaskImage: "url('/dffdf.png')",
@@ -83,6 +86,7 @@ export default function SignupPage() {
                   maskPosition: "center",
                 }} />
               <img src="/dffdf.png" alt="Inflow Logo" className="h-full w-auto opacity-0" />
+            </div>
             </div>
           </div>
         </div>
@@ -103,6 +107,52 @@ export default function SignupPage() {
               {error}
             </div>
           )}
+
+          {/* Privacy Policy Checkbox */}
+          <div className="mb-3">
+            <label className="flex items-start">
+              <input
+                type="checkbox"
+                checked={acceptPrivacy}
+                onChange={(e) => setAcceptPrivacy(e.target.checked)}
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 mt-0.5 mr-3 flex-shrink-0"
+                required
+              />
+              <span className="text-sm text-gray-600">
+                I agree to the{' '}
+                <button
+                  type="button"
+                  onClick={() => window.location.href = '/privacy'}
+                  className="text-blue-600 hover:text-blue-700 underline font-medium"
+                >
+                  Privacy Policy
+                </button>
+              </span>
+            </label>
+          </div>
+
+          {/* Privacy Policy Checkbox */}
+          <div className="mb-3">
+            <label className="flex items-start">
+              <input
+                type="checkbox"
+                checked={acceptPrivacy}
+                onChange={(e) => setAcceptPrivacy(e.target.checked)}
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 mt-0.5 mr-3 flex-shrink-0"
+                required
+              />
+              <span className="text-sm text-gray-600">
+                I agree to the{' '}
+                <button
+                  type="button"
+                  onClick={() => window.location.href = '/privacy'}
+                  className="text-blue-600 hover:text-blue-700 underline font-medium"
+                >
+                  Privacy Policy
+                </button>
+              </span>
+            </label>
+          </div>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-3">
@@ -169,7 +219,7 @@ export default function SignupPage() {
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !acceptPrivacy}
               className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {loading ? 'Please wait...' : 'Create Account'}
@@ -215,9 +265,12 @@ export default function SignupPage() {
         {/* Footer */}
         <div className="absolute bottom-4 left-6 right-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row justify-between text-xs text-gray-400 space-y-1 sm:space-y-0">
           <span>Copyright © 2025 Inflow Enterprises LTD.</span>
-          <a href="/privacy" className="hover:text-gray-600 transition-colors">
+          <button 
+            onClick={() => window.location.href = '/privacy'}
+            className="hover:text-gray-600 transition-colors text-left"
+          >
             Privacy Policy
-          </a>
+          </button>
         </div>
       </div>
 
