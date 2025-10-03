@@ -55,7 +55,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <p className="text-gray-600 text-sm">Email:</p>
               <a 
                 href="mailto:info@inflow.com" 
-                className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent hover:from-pink-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
+                className="text-primary-600 hover:text-primary-700 transition-colors text-sm"
               >
                 info@inflow.com
               </a>
@@ -98,7 +98,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div>
             <h3 className="text-gray-900 font-semibold mb-4">Support</h3>
             <button
-              onClick={() => handleNavigation('contact')}
+              onClick={handleContactSupport}
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm hover-lift shadow-lg hover:shadow-pink-500/25"
             >
               Contact Support
