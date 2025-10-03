@@ -52,7 +52,7 @@ function App() {
       case 'pricing':
         return <PricingPage />;
       case 'faqs':
-        return <FAQPage />;
+        return <FAQPage onNavigate={handleNavigation} />;
       case 'contact':
         return <ContactPage />;
       case 'about':
