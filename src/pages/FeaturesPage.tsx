@@ -106,7 +106,7 @@ export default function FeaturesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25">
-                <a href="/signup" className="block">Sign Up & Start Your Free Trial Today</a>
+                <a href="/signup" className="block">Get Free Access Today</a>
               </button>
             </div>
           </div>
