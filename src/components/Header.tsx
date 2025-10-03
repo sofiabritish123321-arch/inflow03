@@ -76,14 +76,32 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             </div>
 
             {/* Get Started Button */}
-            <div className="hidden md:block">
-              <button
-                onClick={handleAuthAction}
-                className="group bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25 flex items-center space-x-2"
-              >
-                <span>{user ? 'Sign Out' : 'Get Started'}</span>
-                {!user && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
-              </button>
+            {/* Login and Sign Up Buttons */}
+            <div className="hidden md:flex items-center space-x-3">
+              {user ? (
+                <button
+                  onClick={handleAuthAction}
+                  className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={() => window.location.href = '/login'}
+                    className="bg-white hover:bg-gray-50 text-gray-900 border-2 border-gray-200 hover:border-pink-300 px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
+                  >
+                    Login
+                  </button>
+                  <button
+                    onClick={() => window.location.href = '/signup'}
+                    className="group bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25 flex items-center space-x-2"
+                  >
+                    <span>Sign Up</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
@@ -111,10 +129,10 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
                   </button>
                 ))}
                 <button
-                  onClick={handleAuthAction}
+                  onClick={() => window.location.href = '/signup'}
                   className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 w-full mt-4 shadow-lg hover:shadow-pink-500/25"
                 >
-                  {user ? 'Sign Out' : 'Get Started'}
+                  Sign Up
                 </button>
               </div>
             </div>
