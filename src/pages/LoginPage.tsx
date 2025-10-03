@@ -68,7 +68,6 @@ export default function LoginPage() {
             onClick={handleLogoClick}
           >
             <div className="relative h-8 w-[120px]">
-            <div className="relative h-10 w-[156px]">
               <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                 style={{
                   WebkitMaskImage: "url('/dffdf.png')",
@@ -81,7 +80,6 @@ export default function LoginPage() {
                   maskPosition: "center",
                 }} />
               <img src="/dffdf.png" alt="Inflow Logo" className="h-full w-auto opacity-0" />
-            </div>
             </div>
           </div>
         </div>
@@ -208,12 +206,9 @@ export default function LoginPage() {
         {/* Footer */}
         <div className="absolute bottom-4 left-6 right-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row justify-between text-xs text-gray-400 space-y-1 sm:space-y-0">
           <span>Copyright © 2025 Inflow Enterprises LTD.</span>
-          <button 
-            onClick={() => window.location.href = '/privacy'}
-            className="hover:text-gray-600 transition-colors text-left"
-          >
+          <a href="/privacy" className="hover:text-gray-600 transition-colors">
             Privacy Policy
-          </button>
+          </a>
         </div>
       </div>
 
